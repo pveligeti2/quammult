@@ -4,7 +4,7 @@ CCFLAGS := -O2 -std=c++11
 EXTRA_NVCCFLAGS := --cudart=shared
 build: quamsimV1
 
-quamsimV1.o:quamsimV1.cu
+quamsimV1.o: quamsimV1.cu
 	$(NVCC) $(INCLUDES) $(CCFLAGS) $(GENCODE_FLAGS) -o $@ -c $<
 
 quamsimV1: quamsimV1.o
